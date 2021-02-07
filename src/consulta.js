@@ -26,7 +26,7 @@ db.ventas.aggregate(
                 conseguido_solo_con_IVA: { $multiply: [ "$venta_total",0.21 ] },
                 total_vendido_con_IVA: { $multiply: [ "$venta_total",1.21 ] },
                 total_truncado_con_2_decimales: { $trunc: [ { $multiply: [ "$venta_total", 1.21 ] }, 2 ] },
-                total_truncado_sin_decimal: { $trunc: [ { $multiply: [ "$venta_total", 1.21 ] }, 0 ] }
+                total_truncado_sin_decimales: { $trunc: [ { $multiply: [ "$venta_total", 1.21 ] }, 0 ] }
             }
         },
         {
